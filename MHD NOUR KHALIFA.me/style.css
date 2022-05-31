@@ -1,0 +1,96 @@
+@charset "UTF-8";
+html,
+body {
+    margin: 0;
+    font-family: monospace;
+    background-color: #000;
+    color: #0F0;
+    text-align: center;
+}
+
+* {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+noscript,
+.xterm-container .xterm-terminal .line-normal,
+.xterm-container .xterm-terminal .line-warn,
+.xterm-container .xterm-terminal .line-info,
+.xterm-container .xterm-terminal .line-error {
+    padding: 0.25em 0.6em;
+    background-color: #e73421;
+    color: #FFF;
+}
+
+.xterm-container {
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+    padding: 50px 0 10px 0;
+    min-width: 48em;
+    height: 100vh;
+}
+
+.xterm-container .xterm-terminal {
+    white-space: pre;
+}
+
+.xterm-container .xterm-terminal .middot {
+    text-align: center;
+    color: #262626;
+}
+
+.xterm-container .xterm-terminal .command-enter::before {
+    content: "root@MhdKhalifa:~# ";
+}
+
+.xterm-container .xterm-terminal .line-info {
+    background-color: #5c6042;
+}
+
+.xterm-container .xterm-terminal .line-warn {
+    background-color: #ff7e00;
+}
+
+.xterm-container .xterm-terminal .line-normal {
+    background: none;
+    color: #999999;
+}
+
+.xterm-container .xterm-terminal>* {
+    margin: 0;
+    line-height: 1;
+}
+
+.xterm-container .xterm-terminal>*:last-child::after {
+    content: " ";
+    display: inline-block;
+    text-decoration: underline;
+    -webkit-animation: blink 250ms infinite;
+    animation: blink 250ms infinite;
+}
+
+@-webkit-keyframes blink {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0;
+    }
+}
+
+@keyframes blink {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0;
+    }
+}
